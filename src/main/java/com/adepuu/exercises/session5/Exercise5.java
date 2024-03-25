@@ -1,6 +1,10 @@
 package com.adepuu.exercises.session5;
 
+import java.util.HashMap;
+import java.util.Objects;
+
 public class Exercise5 {
+
     /**
      * Java Array Program to sort array in increasing & decreasing order
      *
