@@ -22,7 +22,7 @@ public class Exercise1 {
                         sum += num;
                     }
                     double average = (double) sum / listNum.size();
-                    System.out.printf("%.3f", average);
+                    System.out.printf("%.2f", average);
                     break;
                 }
                 else {
@@ -34,7 +34,6 @@ public class Exercise1 {
 
             } catch (NumberFormatException e) {
                 System.out.println("Number Format error");
-
             }
         }
         inputDataStream.close();
