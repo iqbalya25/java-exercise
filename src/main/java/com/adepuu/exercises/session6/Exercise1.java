@@ -22,7 +22,7 @@ public class Exercise1 {
                         sum += num;
                     }
                     double average = (double) sum / listNum.size();
-                    System.out.println(average);
+                    System.out.printf("%.3f", average);
                     break;
                 }
                 else {
