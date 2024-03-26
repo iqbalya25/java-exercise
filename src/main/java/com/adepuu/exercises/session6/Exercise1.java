@@ -21,7 +21,7 @@ public class Exercise1 {
                     for (int num : listNum) {
                         sum += num;
                     }
-                    double average = sum / listNum.size();
+                    double average = (double) sum / listNum.size();
                     System.out.println(average);
                     break;
                 }
