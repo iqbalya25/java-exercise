@@ -13,7 +13,7 @@ public class toDoListUser {
             System.out.println("1. Login");
             System.out.println("2. Create Account");
             System.out.println("3. List Accounts");
-            System.out.println("4. Logout");
+            System.out.println("4. To-Do-List");
             System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
@@ -42,7 +42,11 @@ public class toDoListUser {
                     loginSystem.listAccounts();
                     break;
                 case 4:
-                    loginSystem.logoutUser();
+                    if (loginSystem.getCurrentUser() == null) {
+                        System.out.println("Please login first.");
+                    } else {
+                        System.out.println("To-Do-List");
+                    }
                     break;
                 case 5:
                     System.out.println("Exiting program...");
