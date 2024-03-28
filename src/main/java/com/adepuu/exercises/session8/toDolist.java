@@ -8,7 +8,7 @@ public class toDolist {
         viewToDolist();
     }
 
-    public static void tampilkanTodoList() {
+    public static void showTodoList() {
         for(var i = 0; i < model.length; i++) {
             String todoString = model[i];
             var no = i + 1;
@@ -49,7 +49,7 @@ public class toDolist {
             addTodoList("Contoh todo ke-" + i);
         }
 
-        tampilkanTodoList();
+        showTodoList();
     }
 
 
@@ -88,7 +88,7 @@ public class toDolist {
         result = removeTodoList(2);
         System.out.println(result);
 
-        tampilkanTodoList();
+        showTodoList();
     }
 
     public static String input(String info) {
@@ -105,18 +105,18 @@ public class toDolist {
 
     public static void viewToDolist() {
         while(true) {
-            tampilkanTodoList();
+            showTodoList();
             System.out.println();
             System.out.println("TODOLIST");
             System.out.println("OPSI: ");
-            System.out.println("1. Tambah");
-            System.out.println("2. Hapus");
-            System.out.println("x. Keluar");
+            System.out.println("1. Add");
+            System.out.println("2. Remove");
+            System.out.println("x. Out");
 
-            var input = input("Pilih: ");
+            var input = input("Choose: ");
 
             if(input.equals("1")) {
-                viewTambahTodoList();
+                viewAddingTodoList();
             } else if (input.equals("2")) {
                 viewHapusTodoList();
             } else if(input.equals("x")) {
@@ -129,13 +129,13 @@ public class toDolist {
 
 
 
-    public static void viewTambahTodoList() {
-        System.out.println("MANAMBAH TODOLIST");
+    public static void viewAddingTodoList() {
+        System.out.println("ADDING TODOLIST");
 
-        var todo = input("Todo (x jika Batal)");
+        var todo = input("Todo (x for cancel)");
 
         if(todo.equals("x")){
-            // batal
+
         } else {
             addTodoList(todo);
         }
@@ -145,24 +145,24 @@ public class toDolist {
         addTodoList("aku");
         addTodoList("kamu");
 
-        viewTambahTodoList();
+        viewAddingTodoList();
 
-        tampilkanTodoList();
+        showTodoList();
 
 
     }
 
     public static void viewHapusTodoList() {
-        System.out.println("MENGHAPUS TODOLIST");
+        System.out.println("REMOVE TODOLIST");
 
-        var number = input("Nomor todo yang dihapus (x jika Batal) ");
+        var number = input("Number TODO want to remove (x for cancel) ");
 
         if(number.equals("x")) {
-            // batal
+
         } else {
             boolean success = removeTodoList(Integer.valueOf(number));
             if(!success) {
-                System.out.println("gagal mengapus todolist: " + number);
+                System.out.println("failed remove todolist: " + number);
             }
         }
 

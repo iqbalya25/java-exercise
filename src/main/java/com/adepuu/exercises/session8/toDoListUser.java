@@ -13,7 +13,7 @@ public class toDoListUser {
             System.out.println("1. Login");
             System.out.println("2. Create Account");
             System.out.println("3. List Accounts");
-            System.out.println("4. To-Do-List");
+            System.out.println("4. To-Do-List (Login First)");
             System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
@@ -27,10 +27,10 @@ public class toDoListUser {
                     String password = scanner.nextLine();
                     if (loginSystem.loginUser(username, password)) {
                         System.out.println("Login successful! Welcome, " + username + "!");
+                        toDolist.viewToDolist();;
                     } else {
                         System.out.println("Login failed. Incorrect username or password.");
                     }
-                    toDolist.viewToDolist();;
                     break;
                 case 2:
                     System.out.print("Enter new username: ");
