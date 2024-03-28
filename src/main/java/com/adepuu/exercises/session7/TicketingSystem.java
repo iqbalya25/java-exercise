@@ -20,5 +20,11 @@ public class TicketingSystem {
      */
     public static void main(String[] args) {
 
-    }
+            ticket ticketxxi = new ticket ("movie1", 5000,1);
+
+            ticketxxi.processPayment();
+
+            System.out.println("Payment detail");
+            System.out.println("ticket left: " + ticketxxi.getResult());
+        }
 }
