@@ -122,19 +122,12 @@ public class toDolist {
             } else if(input.equals("x")) {
                 break;
             } else {
-                System.out.println("Pilihan tidak dimengerti");
+                System.out.println("Invalid Input");
             }
         }
     }
 
-    public static void testViewShowTodoList() {
-        addTodoList("satu");
-        addTodoList("dua");
-        addTodoList("tiga");
-        addTodoList("empat");
-        addTodoList("lima");
-        viewToDolist();
-    }
+
 
     public static void viewTambahTodoList() {
         System.out.println("MANAMBAH TODOLIST");

@@ -30,6 +30,7 @@ public class toDoListUser {
                     } else {
                         System.out.println("Login failed. Incorrect username or password.");
                     }
+                    toDolist.viewToDolist();;
                     break;
                 case 2:
                     System.out.print("Enter new username: ");
@@ -45,7 +46,7 @@ public class toDoListUser {
                     if (loginSystem.getCurrentUser() == null) {
                         System.out.println("Please login first.");
                     } else {
-                        System.out.println("To-Do-List");
+                        toDolist.viewToDolist();;
                     }
                     break;
                 case 5:
