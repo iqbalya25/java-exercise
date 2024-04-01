@@ -15,10 +15,15 @@ public class LibraryManagement {
 
         Member member = library.getMemberByName("Sisca");
         Book book1 = library.getBookByTitle("Book1");
+        Book book2 = library.getBookByTitle("Book2");
 
+        library.returnBook(member, book2);
+
+        library.borrowBook(member, book1);
 
         library.returnBook(member, book1);
         library.returnBook(member, book1);
+
         library.displayInfo();
 
 
