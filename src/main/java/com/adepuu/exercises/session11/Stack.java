@@ -15,7 +15,54 @@ public class Stack {
      * - Memory Efficiency: The stack should use memory efficiently, allocating and deallocating memory dynamically as needed.
      * - Error Handling: The program should handle edge cases gracefully, such as attempting to pop an element from an empty stack, and provide clear error messages.
      */
-    public static void main(String[] args) {
+    class Node {
+        int data;
+        Node next;
 
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
     }
+        Node head;
+
+        public void addAtBeginning (int newData) {
+            Node newNode = new Node(newData);
+            newNode.next = head;
+            head = newNode;
+
+        }
+
+        public int pop() {
+            if (head == null) {
+                System.out.println("Linked list is empty");
+                return -1; // Return -1 untuk linked list kosong
+            }
+            int removedElement = head.data;
+            head = head.next;
+            return removedElement;
+        }
+
+        public void displayList() {
+            Node currentNode = head;
+            System.out.println("Linked List: ");
+            while (currentNode != null) {
+                System.out.print(currentNode.data + " ");
+                currentNode = currentNode.next;
+            }
+            System.out.println();
+        }
+
+        public static void main(String[] args) {
+            Stack linkedList = new Stack();
+
+            linkedList.addAtBeginning(3);
+            linkedList.addAtBeginning(7);
+            linkedList.addAtBeginning(9);
+
+            linkedList.pop();
+
+            linkedList.displayList();
+        }
 }
